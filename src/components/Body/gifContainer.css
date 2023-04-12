@@ -1,0 +1,11 @@
+.ind-gif {
+  display: inline-block;
+  width: 100%;
+}
+
+.ind-gif-photo {
+  border-radius: 7px;
+  display:block;
+  width: 100%;
+  margin-bottom: 10px;
+}
