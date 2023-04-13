@@ -8,7 +8,7 @@ This project was done using GIPHY Developers APIs.
 
 Live Demo:
 
-Preview:
+Preview: https://bmoran17.github.io/gifty-searcher/
 
 ![](./preview.png)
 
