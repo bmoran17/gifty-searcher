@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/gifty-searcher/static/css/main.87dc605e.css",
+    "main.js": "/gifty-searcher/static/js/main.e274122d.js",
+    "index.html": "/gifty-searcher/index.html",
+    "main.87dc605e.css.map": "/gifty-searcher/static/css/main.87dc605e.css.map",
+    "main.e274122d.js.map": "/gifty-searcher/static/js/main.e274122d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87dc605e.css",
+    "static/js/main.e274122d.js"
+  ]
+}
