@@ -1,4 +1,18 @@
-# Getting Started with Create React App
+# Gifs Searcher using React
+
+This project searches for gif by typing a gif description. It also allows user to set a limit of gifs to display.
+
+App displays trending gifs when it initally renders and when user provides a gif descriptions that provide no existing gifs.
+
+This project was done using GIPHY Developers APIs.
+
+Live Demo:
+
+Preview:
+
+![](./preview.png)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -6,10 +6,10 @@ const Body = () => {
   const [gif, setGif] = useState("");
   const [data, setData] = useState(null);
   const [limit, setLimit] = useState("");
+  const [none, setNone] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(e)
     const input01 = e.target[0].value;
     const input02 = e.target[1].value;
     setGif(input01);
@@ -22,8 +22,18 @@ const Body = () => {
     const SEARCH_URL = `https://api.giphy.com/v1/gifs/search?api_key=jwHt1vVbggrN9NqfVNNwnQFWye9WA6xI&q=${gif}&limit=${limit}&lang=en`
     const response = await fetch(gif === "" ? TRENDING_URL : SEARCH_URL);
     const r = await response.json();
-    setData(r.data);
-    console.log(data)
+
+    console.log(r)
+
+    if (r.data.length === 0) {
+      setNone(true)
+      setGif("")
+    } else {
+      setData(r.data)
+      if(gif !== "") {
+        setNone(false)
+      }
+    }
   }
 
   useEffect(() => {
@@ -37,7 +47,7 @@ const Body = () => {
         <input className="gif-search-limit" type="text" placeholder="Limit" />
         <button className="gif-submit-btn" type="submit">Submit</button>
       </form>
-
+      {none === true && <h2 className="none-found-message">No Gifs found, trending gifs shown below</h2>}
       {data &&
         <div className="results">
           {data.map((item) => <GifContainer photo={item.images.fixed_width.url} />)}
