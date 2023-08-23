@@ -19,7 +19,7 @@ const Body = () => {
   const getGifs = async () => {
     const API_KEY = "jwHt1vVbggrN9NqfVNNwnQFWye9WA6xI"
     const TRENDING_URL = `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=${limit}&rating=g`
-    const SEARCH_URL = `https://api.giphy.com/v1/gifs/search?api_key=jwHt1vVbggrN9NqfVNNwnQFWye9WA6xI&q=${gif}&limit=${limit}&lang=en`
+    const SEARCH_URL = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${gif}&limit=${limit}&lang=en`
     const response = await fetch(gif === "" ? TRENDING_URL : SEARCH_URL);
     const r = await response.json();
 
